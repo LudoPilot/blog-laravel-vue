@@ -8,22 +8,24 @@ use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
-    /**
-     * Seed the application's database.
-     */
-    public function run(): void
-    {
-        // \App\Models\User::factory(10)->create();
-
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
-		
-		\App\Models\User::factory(10)->create([
+	/**
+	 * Seed the application's database.
+	 */
+	public function run(): void
+	{
+		\App\Models\User::factory()->create([
 			'name' => 'John Doe',
 			'email' => 'john.doe@laravel.com',
 			'password' => Hash::make('azerty1234')
 		]);
-    }
+
+
+		// Nous ajouterons Faker plus tard
+		// \App\Models\User::factory(10)->create();
+
+		// \App\Models\User::factory()->create([
+		//     'name' => 'Test User',
+		//     'email' => 'test@example.com',
+		// ]);
+	}
 }
