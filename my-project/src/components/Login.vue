@@ -12,13 +12,20 @@ const login = () => {
 	};
 
 	axios.post('http://127.0.0.1:8000/api/login', loginInfo)
+		.then(response => {
+			const responseData = response.data;
+			localStorage.setItem('authToken', responseData.token);
+		})
+		.catch(error => {
+			console.error('Erreur de connexion', error);
+	});
 }
 </script>
 
 <template>
 
 <h2>Connexion</h2>
-<form action="" method="post">
+<form action="" method="post" @submit.prevent="login">
 	<div>
         <label for="email">Adresse e-mail :</label>
         <input type="email" id="email" v-model="email" required>
