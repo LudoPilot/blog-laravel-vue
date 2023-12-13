@@ -2,6 +2,7 @@ import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
 
 import ArticlesList from '../components/ArticlesList.vue';
 import ArticleDetail from '../components/ArticleDetail.vue';
+import LoginVue from '../components/Login.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -14,6 +15,11 @@ const routes: Array<RouteRecordRaw> = [
     name: 'article-detail',
     component: ArticleDetail,
     props: true,
+  },
+  {
+	path: '/login',
+	name: 'login-form',
+	component: LoginVue,
   },
 ];
 
