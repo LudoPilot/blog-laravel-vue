@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import ArticlesList from './components/ArticlesList.vue'
 
 </script>
 
@@ -13,7 +12,6 @@ import ArticlesList from './components/ArticlesList.vue'
     </a>
   </div>
 
-  <ArticlesList />
   <router-view></router-view>
 </template>
 
